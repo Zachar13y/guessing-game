@@ -3,24 +3,37 @@
 <head>
     <title>About Me</title>
     <script type= "text/javascript">
-        var username = prompt("So, what/'s your name?");
-        console.log ("Username =", username);
         
+        var username = prompt("So, what\'s your name?");
         var message = "Hello, " + username + ".";
-
-        if (username == "") {
+        if (username == "" || undefined) {
             alert('You must enter your name!')
-        } else { alert(message)
+        } else { 
+            alert(message)
         };
 
-        var wantsToGuess = confirm('Play the guessing game to know moar about me... click OK to continue or Cancel to leave')
+        var wantsToGuess = confirm('Play the guessing game to know moar about me... click OK to continue or Cancel to start over');
         if (wantsToGuess == true) {
-            prompt('Question one: How old am I?');
+           var ageAnswer = prompt('Question one: How old am I?');
+            if (ageAnswer == '29') {
+                alert('Yes!')
+            } else{
+                alert('Nope')
+                }
         } else {
-            alert('Fine then! Leave!')
-            
+            alert('Fine then!')
         };
 
+        var pizza = prompt('Do I love pizza?').toLowerCase();
+        if (pizza == 'yes' || 'y' || 'yeah' || 'sure' || 'affirmative' || 'ja'){
+            alert("That\'s correct!")
+        } else {
+            alert('Are you kidding? I do love pizza!')
+        }
+
+        console.log ('Username = ', username);
+        console.log('Age guessed ',  ageAnswer);
+        console.log('Pizza guessed ',  pizza);
     </script>
 </head>
 <body>
