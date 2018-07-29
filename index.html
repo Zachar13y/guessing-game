@@ -12,20 +12,32 @@
             alert(message)
         };
 
-        var wantsToGuess = confirm('Play the guessing game to know moar about me... click OK to continue or Cancel to start over');
+        var wantsToGuess = confirm('Play the guessing game to know moar about me. You will be scored on your answers! Click OK to continue or Cancel to start over');
         if (wantsToGuess == true) {
-           var ageAnswer = prompt('Question one: How old am I?');
-            if (ageAnswer == '29') {
-                alert('Yes!')
-            } else{
-                alert('Nope')
-                }
         } else {
             alert('Fine then!')
-        };
+            username = prompt("So, what\'s your name?");
+        }
+
+        var ageAnswer = prompt('Question one: How many years old am I?');
+
+        while (ageAnswer < 29) {
+            alert('Wrong, go higher.');
+            ageAnswer = prompt('Question one: How old am I?');
+        }
+
+        while (ageAnswer > 29) {
+            alert('Hey! I\'m not that old! Try again.');
+            ageAnswer = prompt('Question one: How old am I?');
+        }
+
+        if (ageAnswer == '29') {
+            alert('Yes!')
+
+        }
 
         var pizza = prompt('Do I love pizza?').toLowerCase();
-        if (pizza == 'yes' || 'y' || 'yeah' || 'sure' || 'affirmative' || 'ja'){
+        if (pizza === ('yes' || 'y' || 'yeah' || 'sure' || 'affirmative' || 'ja')) {
             alert("That\'s correct!")
         } else {
             alert('Are you kidding? I do love pizza!')
