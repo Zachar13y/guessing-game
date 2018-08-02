@@ -7,3 +7,9 @@ Branch: user_score
 * Validating that user input is in the correct format, so that the app can accept uppercase/lowercase or shorthand answers.
 * Adding a fourth question that takes a numeric input, and indicates to the user whether the guess is 'too high' or 'too low'.
 * Notify the user at the end of the game how many questions they guessed correctly, so they can celebrate their awesomeness.
+
+08/01/2018
+
+Branch: class_04
+* Modifying questions to show user correct or incorrect answers on the page effectivly removing alerts.
+
