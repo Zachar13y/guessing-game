@@ -1,6 +1,7 @@
 'use strict'
 
-// let score = 0;
+let score = 0;   
+
 
 // var username = prompt("So, what\'s your name?");
 // var message = "Hello, " + username + ".";
@@ -26,7 +27,7 @@
 // }
 
 
-/////////Problems////////////////////
+/////////Question Age////////////////////
     function askAge() {
         var ageAnswer = prompt('How many years old am I?');
         while ((isNaN(ageAnswer)) || (ageAnswer == undefined)) {
@@ -35,47 +36,73 @@
         } if (ageAnswer < 29) {
             alert('Wrong, go higher.');
             askAge();
+        } if (ageAnswer > 29) {
+            alert('Hey! I\'m not that old.');
+            askAge();
         }
+        else if (ageAnswer == 29) {
+            score++
+            alert('You got it! You have ' + score + ' point!');
+        }
+        console.log('Age guessed ', ageAnswer);
     }
-    
+
+/////////////Question Pizza////////////
     function askPizza() {
         var pizza = prompt('Do I love pizza?').toLowerCase();
         if (pizza === ('yes' || 'y' || 'yeah' || 'sure' || 'affirmative' || 'ja')) {
             score++
             alert("That\'s correct! Your score is " + score + " points.")
         } if (pizza == undefined) {
-            alert('Well I usually like my pizza blank!')
+            alert('Well I don\'t usually like my pizza blank!')
             askPizza();
-            console.log('Pizza guessed ', pizza);
         } if (pizza == ('no' || 'n' || 'nah' || 'nope' || 'negative' || 'nein'))
         alert('Are you kidding? I do love pizza!')
+        
+        console.log('Pizza guessed ', pizza);
     }
-    
 
+///////////////Question City///////////
+    function askCity() {
+        let guessedCities = i; {
+            for (i=0; i <= 1; i++);
+        }
+        var city = prompt('You only have two guesses on this one. Which of these cities was I born in? Kansas City, Houston, Phoenix, Portland, Seattle.').toLowerCase()
+        if (city == ('seattle')) {
+            score++;
+            alert('That is correct!')
+        } else { alert('That is not correct. Guess again.')
+        guessedCities++
+        if (guessedCities === 1) { 
+            break;
+        }
+        askCity();
+        console.log(guessedCities);
+        }
+        console.log('City guessed: ', city);
+    }
+            
         
-        // var ageAnswer = prompt('Question one: How many years old am I?');
-        // ageAnswer = parseInt(ageAnswer);
+    console.log('User\'s score: ', score);
 
-        // while (isNaN(ageAnswer)) {
-        //     alert('That\'s not a valid response format; you must answer using numbers.');
-        //     ageAnswer = prompt('Question one: How old am I?');
-        // }
+    function showAnswer() {
+        document.getElementById('q4').innerHTML = "You rock!"
+    }
+
+//////////Question Car/////////////
+    function askCar() {
+        var car = prompt('What is one my favorite make of car?');
+        var carList = ['BMW', 'Honda', 'Toyota', 'Subaru', 'Daihatsu'];
+        var i; 
+        for (i = 0, carList.length < 4, i++) {
         
-        // while (ageAnswer < 29) {
-        //     alert('Wrong, go higher.');
-        //     ageAnswer = prompt('Question one: How old am I?');
-        // }
-        
-        // while (ageAnswer > 29) {
-        //     alert('Hey! I\'m not that old! Try again.');
-        //     ageAnswer = prompt('Question one: How old am I?');
-        // }
-        
-        // if (ageAnswer == 29) {
-        //     score++
-        //     alert('You got it! You have ' + score + ' point!');
-        // }
-        //     console.log('Age guessed ',  ageAnswer);
-        
-        
-        // console.log('User\'s score: ', score);
+        }
+        console.log(car);
+        if (car == 'BMW') {
+            alert('Correct!');
+            score++
+        }
+    }
+
+
+    // includes for the array
