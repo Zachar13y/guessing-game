@@ -4,32 +4,43 @@ let score = 0;
 
 /////Prints message to screen//////
 function showAnswer() {
-    document.getElementById('q4').innerHTML = "You rock!"
+    document.getElementById('q4').innerHTML = "You rock!";
+    var picture = document.getElementById('lima');
+    console.log(picture);
+    picture.innerHTML = '<img id="black-car" src="./assets/Bmw-135i.jpg" width="35%" height="35%">';
+}
+function showAgeAnswer() {
+    document.getElementById('q4').innerHTML = "You rock!";
+    var picture = document.getElementById('lima');
+    console.log(picture);
+    picture.innerHTML = '<img id="black-car" src="./assets/Bmw-135i.jpg" width="35%" height="35%">';
 }
 
 
-var username = prompt("So, what\'s your name?");
-var message = "Hello, " + username + ".";
-if (username !== 'a,e,i,o,u,y') {
-    alert('That sure is a weird name. Well "' + username + '", let\'s continue I guess.')
-} else {
-    alert(message)
-};
 
-if (username == "" || undefined) {
-    alert('You must enter your name!')
-    username = prompt("So, what\'s your name?");
-} else { 
-    alert(message)
-};
 
-var wantsToGuess = confirm('Play the guessing game to know moar about me. You will be scored on your answers! Click OK to continue or Cancel to start over');
-if (wantsToGuess == true) {
-} else {
-    alert('Fine then!')
-    username = prompt("So, what\'s your name?");
-    console.log ('Username = ', username);
-}
+// var username = prompt("So, what\'s your name?");
+// var message = "Hello, " + username + ".";
+// if (username !==  ('a' || 'e' || 'i' || 'o' || 'u' || 'y')) {
+//     alert('That sure is a weird name. Well "' + usernamZze + '", let\'s continue I guess.')
+// } else {
+//     alert(message)
+// };
+
+// if (username == "" || undefined) {
+//     alert('You must enter your name!')
+//     username = prompt("So, what\'s your name?");
+// } else { 
+//     alert(message)
+// };
+
+// var wantsToGuess = confirm('Play the guessing game to know moar about me. You will be scored on your answers! Click OK to continue or Cancel to start over');
+// if (wantsToGuess == true) {
+// } else {
+//     alert('Fine then!')
+//     username = prompt("So, what\'s your name?");
+//     console.log ('Username = ', username);
+// }
 
 
 /////////Question Age////////////////////
@@ -92,14 +103,14 @@ if (wantsToGuess == true) {
 
 //////////Question Car/////////////
     function askCar() {
-        var car = prompt('What is one my favorite make of car?');
-        var carList = ['BMW', 'Honda', 'Toyota', 'Subaru', 'Daihatsu'];
-        var i; 
+        var car = prompt('What is one my favorite make of car?').toLowerCase();
+        var carList = ['bmw', 'honda', 'porsche', 'toyota', 'subaru', 'daihatsu'];
+        var i;
         for (i = 0; carList.length < 4; i++) {
         
         }
         console.log(car);
-        if (car == 'BMW') {
+        if (car == 'bmw' || 'porsche' || 'honda') {
             alert('Correct!');
             score++
             showAnswer();

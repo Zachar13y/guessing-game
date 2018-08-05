@@ -14,4 +14,10 @@ Branch: class_04
 * Modifying questions to show user correct or incorrect answers on the page effectivly removing alerts.
 
 
+08/05/2018
 
+Branch: class_05
+* Creating a function that will respond to each individual question specific to user's input.
+* Style the page with CSS
+* Including images in my game, when the user guesses correctly, so that the game is more informative and fun.
+* I want to host my game online so that anyone can play!!
