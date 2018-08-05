@@ -3,9 +3,10 @@
 let score = 0;
 
 /////Prints message to screen//////
-function showAnswer(answerId) {
-    document.getElementById('us').innerHTML = "You rock!"
+function showAnswer() {
+    document.getElementById('q4').innerHTML = "You rock!"
 }
+
 
 var username = prompt("So, what\'s your name?");
 var message = "Hello, " + username + ".";
