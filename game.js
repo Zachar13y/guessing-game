@@ -1,30 +1,34 @@
 'use strict'
 
-let score = 0;   
+let score = 0;
 
+/////Prints message to screen//////
+function showAnswer(answerId) {
+    document.getElementById('us').innerHTML = "You rock!"
+}
 
-// var username = prompt("So, what\'s your name?");
-// var message = "Hello, " + username + ".";
-// if (username !== 'a,e,i,o,u,y') {
-//     alert('That sure is a weird name. Well "' + username + '", let\'s continue I guess.')
-// } else {
-//     alert(message)
-// };
+var username = prompt("So, what\'s your name?");
+var message = "Hello, " + username + ".";
+if (username !== 'a,e,i,o,u,y') {
+    alert('That sure is a weird name. Well "' + username + '", let\'s continue I guess.')
+} else {
+    alert(message)
+};
 
-// if (username == "" || undefined) {
-//     alert('You must enter your name!')
-//     username = prompt("So, what\'s your name?");
-// } else { 
-//     alert(message)
-// };
+if (username == "" || undefined) {
+    alert('You must enter your name!')
+    username = prompt("So, what\'s your name?");
+} else { 
+    alert(message)
+};
 
-// var wantsToGuess = confirm('Play the guessing game to know moar about me. You will be scored on your answers! Click OK to continue or Cancel to start over');
-// if (wantsToGuess == true) {
-// } else {
-//     alert('Fine then!')
-//     username = prompt("So, what\'s your name?");
-//     console.log ('Username = ', username);
-// }
+var wantsToGuess = confirm('Play the guessing game to know moar about me. You will be scored on your answers! Click OK to continue or Cancel to start over');
+if (wantsToGuess == true) {
+} else {
+    alert('Fine then!')
+    username = prompt("So, what\'s your name?");
+    console.log ('Username = ', username);
+}
 
 
 /////////Question Age////////////////////
@@ -85,24 +89,18 @@ let score = 0;
         
     console.log('User\'s score: ', score);
 
-    function showAnswer() {
-        document.getElementById('q4').innerHTML = "You rock!"
-    }
-
 //////////Question Car/////////////
     function askCar() {
         var car = prompt('What is one my favorite make of car?');
         var carList = ['BMW', 'Honda', 'Toyota', 'Subaru', 'Daihatsu'];
         var i; 
-        for (i = 0, carList.length < 4, i++) {
+        for (i = 0; carList.length < 4; i++) {
         
         }
         console.log(car);
         if (car == 'BMW') {
             alert('Correct!');
             score++
+            showAnswer();
         }
     }
-
-
-    // includes for the array
