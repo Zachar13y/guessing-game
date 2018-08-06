@@ -2,8 +2,17 @@
     text-align: center;
 }
 
+#age {
+    background-color: #acbdba;
+}
+
 #car {
-    background-color: #051014 
+    background-color: #051014;
+}
+
+#gif-29 {
+    width: 45%;
+    height: 45%;
 }
 
 .button {

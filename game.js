@@ -7,13 +7,13 @@ function showAnswer() {
     document.getElementById('q4').innerHTML = "You rock!";
     var picture = document.getElementById('lima');
     console.log(picture);
-    picture.innerHTML = '<img id="black-car" src="./assets/Bmw-135i.jpg" width="35%" height="35%">';
+    picture.innerHTML = '<img id="black-car" src="./assets/Bmw-135i.jpg" width="45%" height="49%">';
 }
 function showAgeAnswer() {
-    document.getElementById('q4').innerHTML = "You rock!";
-    var picture = document.getElementById('lima');
+    document.getElementById('q1').innerHTML = "Still a twenty somthin\'!";
+    var picture = document.getElementById('zulu');
     console.log(picture);
-    picture.innerHTML = '<img id="black-car" src="./assets/Bmw-135i.jpg" width="35%" height="35%">';
+    picture.innerHTML = '<img id="gif-29" src="./assets/age-29.gif">';
 }
 
 
@@ -58,6 +58,7 @@ function showAgeAnswer() {
         }
         else if (ageAnswer == 29) {
             score++
+            showAgeAnswer();
             alert('You got it! You have ' + score + ' point!');
         }
         console.log('Age guessed ', ageAnswer);
