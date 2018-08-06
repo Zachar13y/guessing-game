@@ -2,18 +2,32 @@
 
 let score = 0;
 
-/////Prints message to screen//////
-function showAnswer() {
-    document.getElementById('q4').innerHTML = "You rock!";
-    var picture = document.getElementById('lima');
-    console.log(picture);
-    picture.innerHTML = '<img id="black-car" src="./assets/Bmw-135i.jpg" width="45%" height="49%">';
-}
 function showAgeAnswer() {
     document.getElementById('q1').innerHTML = "Still a twenty somthin\'!";
     var picture = document.getElementById('zulu');
     console.log(picture);
     picture.innerHTML = '<img id="gif-29" src="./assets/age-29.gif">';
+}
+
+function pizzaAnswer() {
+    document.getElementById('q2').innerHTML = "Life of pie!";
+    var picture = document.getElementById("alpha");
+    console.log(picture);
+    picture.innerHTML = '<img id="pizza_img" src="./assets/pizza.jpg">';
+}
+
+function cityAnswer() {
+    document.getElementById('q3').innerHTML = "Emerald City!";
+    var picture = document.getElementById('charlie');
+    console.log(picture);
+    picture.innerHTML = '<img id="emerald" src="./assets/seattle-sn.jpg">';
+}
+
+function carAnswer() {
+    document.getElementById('q4').innerHTML = "You rock!";
+    var picture = document.getElementById('kilo');
+    console.log(picture);
+    picture.innerHTML = '<img id="black-car" src="./assets/Bmw-135i.jpg" width="45%" height="49%">';
 }
 
 
@@ -58,8 +72,8 @@ function showAgeAnswer() {
         }
         else if (ageAnswer == 29) {
             score++
-            showAgeAnswer();
             alert('You got it! You have ' + score + ' point!');
+            showAgeAnswer();
         }
         console.log('Age guessed ', ageAnswer);
     }
@@ -70,6 +84,7 @@ function showAgeAnswer() {
         if (pizza === ('yes' || 'y' || 'yeah' || 'sure' || 'affirmative' || 'ja')) {
             score++
             alert("That\'s correct! Your score is " + score + " points.")
+            pizzaAnswer();
         } if (pizza == undefined) {
             alert('Well I don\'t usually like my pizza blank!')
             askPizza();
@@ -81,17 +96,17 @@ function showAgeAnswer() {
 
 ///////////////Question City///////////
     function askCity() {
-        let guessedCities = i; {
-            for (i=0; i <= 1; i++);
-        }
-        var city = prompt('You only have two guesses on this one. Which of these cities was I born in? Kansas City, Houston, Phoenix, Portland, Seattle.').toLowerCase()
+        // let guessedCities = i; {
+        //     for (i=0; i <= 1; i++);
+        // }
+        var city = prompt('Which of these cities was I born in? Kansas City, Houston, Phoenix, Portland, Seattle.').toLowerCase()
         if (city == ('seattle')) {
             score++;
             alert('That is correct!')
+            cityAnswer();
         } else { alert('That is not correct. Guess again.')
         guessedCities++
         if (guessedCities === 1) { 
-            break;
         }
         askCity();
         console.log(guessedCities);
@@ -114,6 +129,6 @@ function showAgeAnswer() {
         if (car == 'bmw' || 'porsche' || 'honda') {
             alert('Correct!');
             score++
-            showAnswer();
+            carAnswer();
         }
     }
