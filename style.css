@@ -2,6 +2,47 @@
     text-align: center;
 }
 
-.button {
-   color: aqua;
+#age {
+    background-color: #acbdba;
+}
+
+#gif-29 {
+    width: 45%;
+    height: 45%;
+}
+
+#car {
+    background-color: #051014;
+}
+
+#black-car {
+    width: 49%;
+    height: 49%;
+}
+
+#porsche {
+    width: 45%;
+    height: 49%;
+}
+
+#q4.innerhtml {
+    color: darkgoldenrod;
+}
+
+#pizza {
+     background-color: #cddddd;
+}
+
+#pizza_img {
+    width: 45%;
+    height: 45%;
+}
+
+#city {
+    background-color: #a599b5;
+}
+
+#emerald {
+    width: 45%;
+    height: 45%;
 }
